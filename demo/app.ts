@@ -1,12 +1,6 @@
-import * as config from './config';
-
 import cookieParser from 'cookie-parser';
 import * as path from 'path';
-
 import express from 'express';
-import SwaggerExpress from 'swagger-express-mw';
-import SwaggerUi from 'swagger-tools/middleware/swagger-ui';
-import { buildRoutes } from '../backend';
 
 var app = express();
 // view engine setup

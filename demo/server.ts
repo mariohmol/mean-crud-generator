@@ -1,7 +1,7 @@
 import * as config from './config';
 import SwaggerExpress from 'swagger-express-mw';
 import SwaggerUi from 'swagger-tools/middleware/swagger-ui';
-import { buildRoutes } from '../backend';
+import meanCrudGenerator from '../backend';
 import app from './app';
 
 
@@ -13,7 +13,9 @@ var configSwaggerExpress = {
 SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
     if (err) { throw err; }
 
-    buildRoutes(swaggerExpress, app);
+    // GEN
+    meanCrudGenerator(swaggerExpress, configSwaggerExpress, __dirname, app );
+
     // Add swagger-ui (This must be before swaggerExpress.register)
     app.use(SwaggerUi(swaggerExpress.runner.swagger));
 

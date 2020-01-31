@@ -1,8 +1,9 @@
 import { validateParameters } from "./validations";
 import o2x from 'object-to-xml';
+import express from 'express';
 
 export const makeRoute = (router, method, routePath, endpoint) => {
-    console.log(`Creating  ${method} endpoint on ${routePath} `);
+    // console.log(`Creating  ${method} endpoint on ${routePath} `);
     router[method]('/', (req, res) => {
         if (!validateParameters(req, res, endpoint)) {
             return;
@@ -79,3 +80,22 @@ export const makeResponse = (req, res, endpoint: any, data: any = null) => {
 
 }
 
+
+
+export const buildRoutes = (swaggerExpress, app, configSwaggerExpress) => {
+    const paths = swaggerExpress.runner.swagger.paths;
+
+    for (const key in paths) {
+        const endpointMethods = paths[key];
+        const router = express.Router();
+        for (const method in endpointMethods) {
+            // console.log(`Creating  ${method} endpoint on ${key} `);
+            makeRoute(router, method, key, endpointMethods[method]);
+        }
+
+        const basepath = swaggerExpress.runner.swagger.basePath + key
+        // console.log(`---- Using route middleware ${basepath}`);
+
+        app.use(basepath, router);
+    }
+}
