@@ -1,0 +1,33 @@
+{
+  "name": "mean-crud-generator",
+  "version": "1.0.0",
+  "description": "Mongoose, Express, Angular e Nodejs generator with OpenAPI3 that generates the frontend and JSONSchema to generate the backend",
+  "main": "index.js",
+  "scripts": {
+    "start": "ts-node demo/server.ts",
+    "dev": "nodemon  demo/server.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mariohmol/mean-crud-generator.git"
+  },
+  "author": "Mario Mol <mariohmol@gmail.com> (http://rama.net.br)",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mariohmol/mean-crud-generator/issues"
+  },
+  "homepage": "https://github.com/mariohmol/mean-crud-generator#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.4",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "object-to-xml": "^2.0.0",
+    "swagger-express-mw": "^0.7.0",
+    "swagger-tools": "^0.10.4"
+  },
+  "devDependencies": {
+    "@types/node": "^13.5.3"
+  }
+}

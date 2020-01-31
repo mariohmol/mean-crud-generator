@@ -1,0 +1,14 @@
+{
+    "watch": [
+        "demo/**/*.ts",
+        "backend/*.ts"
+    ],
+    "ext": "js, css,ts",
+    "execMap": {
+        "ts": "ts-node"
+    },
+    "ignore": [
+        "*.test.ts",
+        "demo/**/*.spec.ts"
+    ]
+}
