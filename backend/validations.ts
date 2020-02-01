@@ -1,4 +1,4 @@
-export const validateParameters = (req, res, endpoint) => {
+export const validateParameters = (req, res, endpoint, swaggerExpress) => {
 
     let errors: any = [];
     endpoint.parameters
@@ -10,13 +10,38 @@ export const validateParameters = (req, res, endpoint) => {
                     value = req.get(param.name);
                     break;
                 case "path":
-                    value = req.param[param.name];
+                    console.log(req.params, req.query, req.originalUrl)
+                    value = req.params[param.name];
                     break;
                 case "formData":
                     value = req.formData[param.name];
                     break;
                 case "body":
-                    value = req.body[param.name];
+                    // console.log(param, swaggerExpress.runner.swagger.definitions)
+                    const definitions  = swaggerExpress.runner.swagger.definitions;
+                    if(param.schema && param.schema.$ref){
+                        const vals = param.schema.$ref.split('/');
+                        const definition = vals[vals.length -1];
+                        const definitionObject = definitions[definition];
+                        const props = definitionObject.properties;
+                        const required = definitionObject.required;
+                        if(required){
+                            required.forEach(r=>{
+                                value = req.body[r]
+                                if (!value) {
+                                    const prop = props[r] || {};
+                                    errors.push({
+                                        name: r,
+                                        description: `Field type ${prop.type} example: ${prop.example}`
+                                    });
+                                }
+                            });
+                        }
+                        return;
+                    }else{
+                        value = req.body[param.name];
+                    }
+                    
                     break;
                 case "query":
                     value = req.query[param.name];
@@ -28,6 +53,7 @@ export const validateParameters = (req, res, endpoint) => {
             if (!value) {
                 errors.push({
                     name: param.name,
+                    param: param.in,
                     description: param.description
                 });
             }

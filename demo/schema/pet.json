@@ -1,0 +1,23 @@
+{
+    "$schema": "http://json-schema.org/schema#",
+    "title": "pet",
+    "type": "object",
+    "properties": {
+        "userId": {
+            "type": "number"
+        },
+        "id": {
+            "type": "number"
+        },
+        "name": {
+            "type": "string"
+        },
+        "photoUrls": {
+            "type": "array"
+        }
+    },
+    "required": [
+        "name",
+        "photoUrls"
+    ]
+}

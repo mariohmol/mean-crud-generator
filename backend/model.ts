@@ -4,16 +4,24 @@ import path from 'path'
 import mongoose from 'mongoose'
 import generator from 'mongoose-gen';
 import createMongooseSchema from 'json-schema-to-mongoose';
+import schemaParser from './schema-parser';
 
-export const buildModels = async (dir, app) => {
+export const buildModels = async (dir, app, configSwaggerExpress) => {
     dir = path.join(dir, '/schema');
-    const models = await readModels(dir);
+    const models = await readModels(dir, configSwaggerExpress);
     console.log(`Setting models in app ${Object.keys(models).length}`);
     app.set('models', models);
     return models;
 }
+export const readModels = async (dir, configSwaggerExpress) => {
+    return readModelSchemaParser(dir, configSwaggerExpress);
+}
 
-export const readModels = async (dir) => {
+const readModelSchemaParser = async (dir, configSwaggerExpress) => {
+    const r: any = await schemaParser(dir, configSwaggerExpress.baseUri)
+    return r.schemas;
+}
+export const readModelsFiles = async (dir, configSwaggerExpress) => {
     const models = {};
     const files = fs.readdirSync(dir)
         .map(f => join(dir, f))
@@ -36,20 +44,26 @@ export const readModels = async (dir) => {
         let schema;
         try {
             if (f.indexOf('/schema/data/') > 0) {
-                console.log('Making schema from Data') // // If is Array infer the Model
+                console.log('Making schema from Data') // If is Array infer the Model
+                delete data.default;
                 console.log(data)
                 schema = new mongoose.Schema(generator.convert(data));
             } else {
                 console.log('Making schema from JSONSchema') //If is an object make its a JSONSchema
+
                 const mongooseSchema = createMongooseSchema(data);
                 schema = new mongoose.Schema(mongooseSchema);
             }
 
 
             // get file name
-            console.log('Making Model')
-            const model = mongoose.model(name, schema);
-            models[name] = model;
+
+            if (schema) {
+                console.log('Making Model')
+                const model = mongoose.model(name, schema);
+                models[name] = model;
+            }
+
         } catch (e) {
             console.log(`Error ${name}`, e)
         }

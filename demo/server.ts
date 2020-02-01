@@ -6,9 +6,21 @@ import mongoose from 'mongoose';
 import app from './app';
 
 
+
+let baseUri = 'http://localhost:8080/';
+
+if (process.env.BASE_URI) {
+    baseUri = process.env.BASE_URI.replace(/\/$/, '');
+} else {
+    require('dns').lookup(require('os').hostname(), function (err, ipAddress, fam) {
+        baseUri = "http://" + ipAddress + ":" + (process.env.PORT || 3000);
+    });
+}
+
 var configSwaggerExpress = {
     appRoot: __dirname,
-    swaggerFile: __dirname + '/api/index.yaml'
+    swaggerFile: __dirname + '/api/index.yaml',
+    baseUri
 };
 
 SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
@@ -21,7 +33,7 @@ SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
     app.use(SwaggerUi(swaggerExpress.runner.swagger));
 
     // install middleware
-    swaggerExpress.register(app);
+    // swaggerExpress.register(app);
 
     const { PORT, DATABASE_URL } = config;
 
@@ -30,7 +42,6 @@ SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
     console.log(`Connected to db at ${DATABASE_URL}`);
     app.listen(PORT, () => { // const server = 
         console.log(`Listen to port ${PORT}`);
-
     });
 
 
