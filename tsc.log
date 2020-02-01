@@ -1,0 +1,300 @@
+node_modules/@types/node/assert.d.ts(52,14): error TS2300: Duplicate identifier 'internal'.
+node_modules/@types/node/buffer.d.ts(2,18): error TS2451: Cannot redeclare block-scoped variable 'INSPECT_MAX_BYTES'.
+node_modules/@types/node/child_process.d.ts(22,18): error TS2687: All declarations of 'pid' must have identical modifiers.
+node_modules/@types/node/child_process.d.ts(99,15): error TS2430: Interface 'ChildProcessByStdio<I, O, E>' incorrectly extends interface 'ChildProcess'.
+  Types of property 'stdin' are incompatible.
+    Type 'I' is not assignable to type 'Writable'.
+      Type 'Writable | null' is not assignable to type 'Writable'.
+        Type 'null' is not assignable to type 'Writable'.
+node_modules/@types/node/cluster.d.ts(24,11): error TS2300: Duplicate identifier 'Worker'.
+node_modules/@types/node/cluster.d.ts(181,11): error TS2451: Cannot redeclare block-scoped variable 'isMaster'.
+node_modules/@types/node/cluster.d.ts(182,11): error TS2451: Cannot redeclare block-scoped variable 'isWorker'.
+node_modules/@types/node/cluster.d.ts(184,11): error TS2451: Cannot redeclare block-scoped variable 'settings'.
+node_modules/@types/node/cluster.d.ts(186,11): error TS2451: Cannot redeclare block-scoped variable 'worker'.
+node_modules/@types/node/cluster.d.ts(187,11): error TS2451: Cannot redeclare block-scoped variable 'workers'.
+node_modules/@types/node/domain.d.ts(4,11): error TS2300: Duplicate identifier 'Domain'.
+node_modules/@types/node/events.d.ts(38,19): error TS2300: Duplicate identifier 'EventEmitter'.
+node_modules/@types/node/events.d.ts(41,15): error TS2300: Duplicate identifier 'EventEmitter'.
+node_modules/@types/node/events.d.ts(49,5): error TS2309: An export assignment cannot be used in a module with other exported elements.
+node_modules/@types/node/globals.d.ts(144,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'global' must be of type 'any', but here has type 'Global'.
+node_modules/@types/node/globals.d.ts(167,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'require' must be of type '{ (id: string): any; resolve(id: string): string; cache: any; extensions: any; main: any; }', but here has type 'NodeRequire'.
+node_modules/@types/node/globals.d.ts(168,13): error TS2403: Subsequent variable declarations must have the same type.  Variable 'module' must be of type '{ exports: any; require(id: string): any; id: string; filename: string; loaded: boolean; parent: any; children: any[]; }', but here has type 'NodeModule'.
+node_modules/@types/node/globals.d.ts(181,15): error TS2300: Duplicate identifier 'Buffer'.
+node_modules/@types/node/globals.d.ts(343,5): error TS2416: Property 'slice' in type 'Buffer' is not assignable to the same property in base type 'Uint8Array'.
+  Type '(begin?: number | undefined, end?: number | undefined) => Buffer' is not assignable to type '(start?: number | undefined, end?: number | undefined) => Uint8Array'.
+    Call signature return types 'Buffer' and 'Uint8Array' are incompatible.
+      The types returned by 'fill(...)' are incompatible between these types.
+        Type 'void' is not assignable to type 'Uint8Array'.
+node_modules/@types/node/globals.d.ts(352,5): error TS2416: Property 'subarray' in type 'Buffer' is not assignable to the same property in base type 'Uint8Array'.
+  Type '(begin?: number | undefined, end?: number | undefined) => Buffer' is not assignable to type '(begin?: number | undefined, end?: number | undefined) => Uint8Array'.
+    Type 'Buffer' is not assignable to type 'Uint8Array'.
+node_modules/@types/node/globals.d.ts(375,5): error TS2416: Property 'reverse' in type 'Buffer' is not assignable to the same property in base type 'Uint8Array'.
+  Type '() => this' is not assignable to type '() => Uint8Array'.
+    Type 'this' is not assignable to type 'Uint8Array'.
+      Type 'Buffer' is not assignable to type 'Uint8Array'.
+        Types of property 'slice' are incompatible.
+          Type '(begin?: number | undefined, end?: number | undefined) => Buffer' is not assignable to type '(start?: number | undefined, end?: number | undefined) => Uint8Array'.
+node_modules/@types/node/globals.d.ts(533,9): error TS2717: Subsequent property declarations must have the same type.  Property 'errno' must be of type 'any', but here has type 'number | undefined'.
+node_modules/@types/node/globals.d.ts(761,9): error TS2717: Subsequent property declarations must have the same type.  Property 'stdout' must be of type 'WritableStream', but here has type 'WriteStream'.
+node_modules/@types/node/globals.d.ts(765,9): error TS2717: Subsequent property declarations must have the same type.  Property 'stderr' must be of type 'WritableStream', but here has type 'WriteStream'.
+node_modules/@types/node/globals.d.ts(766,9): error TS2717: Subsequent property declarations must have the same type.  Property 'stdin' must be of type 'ReadableStream', but here has type 'ReadStream'.
+node_modules/@types/node/globals.d.ts(777,9): error TS2717: Subsequent property declarations must have the same type.  Property 'env' must be of type 'any', but here has type 'ProcessEnv'.
+node_modules/@types/node/globals.d.ts(793,9): error TS2717: Subsequent property declarations must have the same type.  Property 'versions' must be of type '{ http_parser: string; node: string; v8: string; ares: string; uv: string; zlib: string; openssl: string; }', but here has type 'ProcessVersions'.
+node_modules/@types/node/globals.d.ts(825,9): error TS2717: Subsequent property declarations must have the same type.  Property 'platform' must be of type 'string', but here has type 'Platform'.
+node_modules/@types/node/globals.d.ts(846,9): error TS2717: Subsequent property declarations must have the same type.  Property 'hrtime' must be of type '(time?: number[] | undefined) => number[]', but here has type 'HRTime'.
+node_modules/@types/node/http.d.ts(130,11): error TS2415: Class 'import("http").Server' incorrectly extends base class 'import("net").Server'.
+  The types of 'listen(...).listen' are incompatible between these types.
+    Type '{ (port: number, hostname?: string | undefined, backlog?: number | undefined, callback?: Function | undefined): Server; (path: string, callback?: Function | undefined): Server; (handle: any, listeningListener?: Function | undefined): Server; }' is not assignable to type '{ (port: number, host?: string | undefined, backlog?: number | undefined, listeningListener?: Function | undefined): Server; (path: string, listeningListener?: Function | undefined): Server; (handle: any, listeningListener?: Function | undefined): Server; (port?: number | undefined, hostname?: string | undefined, ba...'.
+      Types of parameters 'port' and 'path' are incompatible.
+        Type 'string' is not assignable to type 'number'.
+node_modules/@types/node/http.d.ts(353,18): error TS2687: All declarations of 'sockets' must have identical modifiers.
+node_modules/@types/node/http.d.ts(353,18): error TS2717: Subsequent property declarations must have the same type.  Property 'sockets' must be of type 'any', but here has type '{ readonly [key: string]: Socket[]; }'.
+node_modules/@types/node/http.d.ts(356,18): error TS2687: All declarations of 'requests' must have identical modifiers.
+node_modules/@types/node/http.d.ts(356,18): error TS2717: Subsequent property declarations must have the same type.  Property 'requests' must be of type 'any', but here has type '{ readonly [key: string]: IncomingMessage[]; }'.
+node_modules/@types/node/http.d.ts(373,11): error TS2451: Cannot redeclare block-scoped variable 'STATUS_CODES'.
+node_modules/@types/node/http.d.ts(388,9): error TS2451: Cannot redeclare block-scoped variable 'globalAgent'.
+node_modules/@types/node/https.d.ts(7,10): error TS2300: Duplicate identifier 'ServerOptions'.
+node_modules/@types/node/https.d.ts(9,10): error TS2300: Duplicate identifier 'RequestOptions'.
+node_modules/@types/node/https.d.ts(19,11): error TS2300: Duplicate identifier 'Agent'.
+node_modules/@types/node/https.d.ts(36,9): error TS2451: Cannot redeclare block-scoped variable 'globalAgent'.
+node_modules/@types/node/net.d.ts(56,11): error TS2300: Duplicate identifier 'Socket'.
+node_modules/@types/node/os.d.ts(214,11): error TS2451: Cannot redeclare block-scoped variable 'EOL'.
+node_modules/@types/node/path.d.ts(152,5): error TS2309: An export assignment cannot be used in a module with other exported elements.
+node_modules/@types/node/punycode.d.ts(6,11): error TS2451: Cannot redeclare block-scoped variable 'ucs2'.
+node_modules/@types/node/punycode.d.ts(7,15): error TS2451: Cannot redeclare block-scoped variable 'ucs2'.
+node_modules/@types/node/punycode.d.ts(11,11): error TS2451: Cannot redeclare block-scoped variable 'version'.
+node_modules/@types/node/readline.d.ts(124,10): error TS2300: Duplicate identifier 'ReadLine'.
+node_modules/@types/node/readline.d.ts(133,9): error TS2687: All declarations of 'output' must have identical modifiers.
+node_modules/@types/node/readline.d.ts(134,9): error TS2717: Subsequent property declarations must have the same type.  Property 'completer' must be of type 'Function | undefined', but here has type 'Completer | AsyncCompleter | undefined'.
+node_modules/@types/node/repl.d.ts(38,9): error TS2717: Subsequent property declarations must have the same type.  Property 'eval' must be of type 'Function | undefined', but here has type 'REPLEval | undefined'.
+node_modules/@types/node/repl.d.ts(70,9): error TS2717: Subsequent property declarations must have the same type.  Property 'writer' must be of type 'Function | undefined', but here has type 'REPLWriter | undefined'.
+node_modules/@types/node/stream.d.ts(22,15): error TS2300: Duplicate identifier 'Readable'.
+node_modules/@types/node/stream.d.ts(121,15): error TS2300: Duplicate identifier 'Writable'.
+node_modules/@types/node/stream.d.ts(227,15): error TS2300: Duplicate identifier 'Duplex'.
+node_modules/@types/node/stream.d.ts(262,15): error TS2300: Duplicate identifier 'Transform'.
+node_modules/@types/node/stream.d.ts(268,15): error TS2300: Duplicate identifier 'PassThrough'.
+node_modules/@types/node/stream.d.ts(331,5): error TS2309: An export assignment cannot be used in a module with other exported elements.
+node_modules/@types/node/string_decoder.d.ts(2,11): error TS2300: Duplicate identifier 'StringDecoder'.
+node_modules/@types/node/tls.d.ts(7,11): error TS2451: Cannot redeclare block-scoped variable 'CLIENT_RENEG_LIMIT'.
+node_modules/@types/node/tls.d.ts(8,11): error TS2451: Cannot redeclare block-scoped variable 'CLIENT_RENEG_WINDOW'.
+node_modules/@types/node/tls.d.ts(464,11): error TS2415: Class 'import("tls").Server' incorrectly extends base class 'import("net").Server'.
+node_modules/@types/node/tls.d.ts(548,9): error TS2717: Subsequent property declarations must have the same type.  Property 'encrypted' must be of type 'any', but here has type 'TLSSocket'.
+node_modules/@types/node/tls.d.ts(549,9): error TS2717: Subsequent property declarations must have the same type.  Property 'cleartext' must be of type 'any', but here has type 'TLSSocket'.
+node_modules/@types/node/url.d.ts(21,9): error TS2717: Subsequent property declarations must have the same type.  Property 'auth' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(22,9): error TS2687: All declarations of 'hash' must have identical modifiers.
+node_modules/@types/node/url.d.ts(22,9): error TS2717: Subsequent property declarations must have the same type.  Property 'hash' must be of type 'string | undefined', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(23,9): error TS2717: Subsequent property declarations must have the same type.  Property 'host' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(24,9): error TS2717: Subsequent property declarations must have the same type.  Property 'hostname' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(26,9): error TS2687: All declarations of 'path' must have identical modifiers.
+node_modules/@types/node/url.d.ts(26,9): error TS2717: Subsequent property declarations must have the same type.  Property 'path' must be of type 'string | undefined', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(27,9): error TS2717: Subsequent property declarations must have the same type.  Property 'pathname' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(28,9): error TS2717: Subsequent property declarations must have the same type.  Property 'protocol' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(29,9): error TS2717: Subsequent property declarations must have the same type.  Property 'search' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(30,9): error TS2717: Subsequent property declarations must have the same type.  Property 'slashes' must be of type 'boolean', but here has type 'boolean | null'.
+node_modules/@types/node/url.d.ts(31,9): error TS2717: Subsequent property declarations must have the same type.  Property 'port' must be of type 'string', but here has type 'string | null'.
+node_modules/@types/node/url.d.ts(32,9): error TS2717: Subsequent property declarations must have the same type.  Property 'query' must be of type 'any', but here has type 'string | ParsedUrlQuery | null'.
+node_modules/@types/node/zlib.d.ts(1,1): error TS6200: Definitions of the following identifiers conflict with those in another file: Z_NO_FLUSH, Z_PARTIAL_FLUSH, Z_SYNC_FLUSH, Z_FULL_FLUSH, Z_FINISH, Z_BLOCK, Z_TREES, Z_OK, Z_STREAM_END, Z_NEED_DICT, Z_ERRNO, Z_STREAM_ERROR, Z_DATA_ERROR, Z_MEM_ERROR, Z_BUF_ERROR, Z_VERSION_ERROR, Z_NO_COMPRESSION, Z_BEST_SPEED, Z_BEST_COMPRESSION, Z_DEFAULT_COMPRESSION, Z_FILTERED, Z_HUFFMAN_ONLY, Z_RLE, Z_FIXED, Z_DEFAULT_STRATEGY, Z_BINARY, Z_TEXT, Z_ASCII, Z_UNKNOWN, Z_DEFLATED
+node_modules/@types/node/zlib.d.ts(21,9): error TS2717: Subsequent property declarations must have the same type.  Property 'dictionary' must be of type 'any', but here has type 'ArrayBuffer | DataView | Int8Array | Uint8Array | Uint8ClampedArray | Int16Array | Uint16Array | ... 4 more ... | undefined'.
+node_modules/json-schema-to-mongoose/lib/json-schema.ts(33,28): error TS2769: No overload matches this call.
+  Overload 1 of 10, '(array: string[]): string', gave the following error.
+    Argument of type 'RegExpExecArray | null' is not assignable to parameter of type 'string[]'.
+      Type 'null' is not assignable to type 'string[]'.
+  Overload 2 of 10, '(array: List<string>): string', gave the following error.
+    Argument of type 'RegExpExecArray | null' is not assignable to parameter of type 'List<string>'.
+      Type 'null' is not assignable to type 'List<string>'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(17,1): error TS6200: Definitions of the following identifiers conflict with those in another file: Z_NO_FLUSH, Z_PARTIAL_FLUSH, Z_SYNC_FLUSH, Z_FULL_FLUSH, Z_FINISH, Z_BLOCK, Z_TREES, Z_OK, Z_STREAM_END, Z_NEED_DICT, Z_ERRNO, Z_STREAM_ERROR, Z_DATA_ERROR, Z_MEM_ERROR, Z_BUF_ERROR, Z_VERSION_ERROR, Z_NO_COMPRESSION, Z_BEST_SPEED, Z_BEST_COMPRESSION, Z_DEFAULT_COMPRESSION, Z_FILTERED, Z_HUFFMAN_ONLY, Z_RLE, Z_FIXED, Z_DEFAULT_STRATEGY, Z_BINARY, Z_TEXT, Z_ASCII, Z_UNKNOWN, Z_DEFLATED
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(63,11): error TS2300: Duplicate identifier 'Buffer'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(63,11): error TS2320: Interface 'Buffer' cannot simultaneously extend types 'NodeBuffer' and 'Uint8Array'.
+  Named property 'fill' of types 'NodeBuffer' and 'Uint8Array' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(63,11): error TS2320: Interface 'Buffer' cannot simultaneously extend types 'NodeBuffer' and 'Uint8Array'.
+  Named property 'length' of types 'NodeBuffer' and 'Uint8Array' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(63,11): error TS2320: Interface 'Buffer' cannot simultaneously extend types 'NodeBuffer' and 'Uint8Array'.
+  Named property 'slice' of types 'NodeBuffer' and 'Uint8Array' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(63,11): error TS2320: Interface 'Buffer' cannot simultaneously extend types 'NodeBuffer' and 'Uint8Array'.
+  Named property 'toString' of types 'NodeBuffer' and 'Uint8Array' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(64,13): error TS2300: Duplicate identifier 'Buffer'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(193,22): error TS2430: Interface 'Timer' incorrectly extends interface 'RefCounted'.
+  The types returned by 'ref()' are incompatible between these types.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(247,16): error TS2451: Cannot redeclare block-scoped variable 'INSPECT_MAX_BYTES'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(258,18): error TS2300: Duplicate identifier 'EventEmitter'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(261,9): error TS2416: Property 'addListener' in type 'EventEmitter' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => EventEmitter' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'EventEmitter' is missing the following properties from type 'EventEmitter': off, getMaxListeners, rawListeners, listenerCount, and 3 more.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(262,9): error TS2416: Property 'on' in type 'EventEmitter' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => EventEmitter' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'import("events").EventEmitter' is not assignable to type 'NodeJS.EventEmitter'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(263,9): error TS2416: Property 'once' in type 'EventEmitter' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => EventEmitter' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'import("events").EventEmitter' is not assignable to type 'NodeJS.EventEmitter'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(264,9): error TS2416: Property 'removeListener' in type 'EventEmitter' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => EventEmitter' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'import("events").EventEmitter' is not assignable to type 'NodeJS.EventEmitter'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(265,9): error TS2416: Property 'removeAllListeners' in type 'EventEmitter' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event?: string | undefined) => EventEmitter' is not assignable to type '{ (event?: string | undefined): EventEmitter; (event?: string | symbol | undefined): this; }'.
+    Type 'import("events").EventEmitter' is not assignable to type 'NodeJS.EventEmitter'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(266,9): error TS2416: Property 'setMaxListeners' in type 'EventEmitter' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(n: number) => void' is not assignable to type '{ (n: number): void; (n: number): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'EventEmitter'.
+  Named property 'addListener' of types 'Server' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'EventEmitter'.
+  Named property 'emit' of types 'Server' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'EventEmitter'.
+  Named property 'on' of types 'Server' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'EventEmitter'.
+  Named property 'once' of types 'Server' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'EventEmitter'.
+  Named property 'prependListener' of types 'Server' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'EventEmitter'.
+  Named property 'prependOnceListener' of types 'Server' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(277,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'HttpBase'.
+  Named property 'setTimeout' of types 'Server' and 'HttpBase' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'addListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'emit' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'on' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'once' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'prependListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'prependOnceListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(285,22): error TS2320: Interface 'ServerRequest' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'removeListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'addListener' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'emit' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'on' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'once' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'prependListener' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'prependOnceListener' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(296,22): error TS2320: Interface 'ServerResponse' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'removeListener' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(322,22): error TS2320: Interface 'ClientRequest' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'emit' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(322,22): error TS2320: Interface 'ClientRequest' cannot simultaneously extend types 'OutgoingMessage' and 'EventEmitter'.
+  Named property 'removeListener' of types 'OutgoingMessage' and 'EventEmitter' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'addListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'emit' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'on' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'once' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'prependListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'prependOnceListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(343,22): error TS2320: Interface 'ClientResponse' cannot simultaneously extend types 'EventEmitter' and 'Readable'.
+  Named property 'removeListener' of types 'EventEmitter' and 'Readable' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(352,50): error TS2687: All declarations of 'sockets' must have identical modifiers.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(352,64): error TS2687: All declarations of 'requests' must have identical modifiers.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(354,16): error TS2451: Cannot redeclare block-scoped variable 'STATUS_CODES'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(362,16): error TS2451: Cannot redeclare block-scoped variable 'globalAgent'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(375,18): error TS2300: Duplicate identifier 'Worker'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(385,16): error TS2451: Cannot redeclare block-scoped variable 'settings'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(386,16): error TS2451: Cannot redeclare block-scoped variable 'isMaster'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(387,16): error TS2451: Cannot redeclare block-scoped variable 'isWorker'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(391,16): error TS2451: Cannot redeclare block-scoped variable 'worker'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(392,16): error TS2451: Cannot redeclare block-scoped variable 'workers'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(480,16): error TS2451: Cannot redeclare block-scoped variable 'EOL'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(488,22): error TS2300: Duplicate identifier 'ServerOptions'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(503,22): error TS2300: Duplicate identifier 'RequestOptions'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(521,22): error TS2300: Duplicate identifier 'Agent'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(526,16): error TS2300: Duplicate identifier 'Agent'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(529,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'Server' and 'HttpBase'.
+  Named property 'setTimeout' of types 'Server' and 'HttpBase' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(533,16): error TS2451: Cannot redeclare block-scoped variable 'globalAgent'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(541,16): error TS2451: Cannot redeclare block-scoped variable 'ucs2'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(542,15): error TS2451: Cannot redeclare block-scoped variable 'ucs2'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(546,16): error TS2451: Cannot redeclare block-scoped variable 'version'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(571,22): error TS2300: Duplicate identifier 'ReadLine'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(582,9): error TS2687: All declarations of 'output' must have identical modifiers.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(610,9): error TS2687: All declarations of 'pid' must have identical modifiers.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(667,9): error TS2687: All declarations of 'hash' must have identical modifiers.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(668,9): error TS2687: All declarations of 'path' must have identical modifiers.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(707,22): error TS2300: Duplicate identifier 'Socket'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(707,22): error TS2430: Interface 'Socket' incorrectly extends interface 'Duplex'.
+  The types returned by 'setEncoding(...)' are incompatible between these types.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(743,16): error TS2300: Duplicate identifier 'Socket'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(747,22): error TS2320: Interface 'Server' cannot simultaneously extend types 'EventEmitter' and 'Socket'.
+  Named property 'removeListener' of types 'EventEmitter' and 'Socket' are not identical.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(971,16): error TS2300: Duplicate identifier 'StringDecoder'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(981,9): error TS2451: Cannot redeclare block-scoped variable 'CLIENT_RENEG_LIMIT'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(982,9): error TS2451: Cannot redeclare block-scoped variable 'CLIENT_RENEG_WINDOW'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1013,22): error TS2430: Interface 'import("tls").Server' incorrectly extends interface 'import("net").Server'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1013,22): error TS2430: Interface 'import("tls").Server' incorrectly extends interface 'import("net").Server'.
+  The types of 'listen(...).listen' are incompatible between these types.
+    Type '{ (port: number, host?: string | undefined, backlog?: number | undefined, listeningListener?: Function | undefined): Server; (path: string, listeningListener?: Function | undefined): Server; (handle: any, listeningListener?: Function | undefined): Server; (port: number, host?: string | undefined, callback?: Function...' is not assignable to type '{ (port: number, host?: string | undefined, backlog?: number | undefined, listeningListener?: Function | undefined): Server; (path: string, listeningListener?: Function | undefined): Server; (handle: any, listeningListener?: Function | undefined): Server; (port?: number | undefined, hostname?: string | undefined, ba...'.
+      Types of parameters 'host' and 'backlog' are incompatible.
+        Type 'number | undefined' is not assignable to type 'string | undefined'.
+          Type 'number' is not assignable to type 'string | undefined'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1149,18): error TS2300: Duplicate identifier 'Readable'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1154,9): error TS2416: Property 'setEncoding' in type 'Readable' is not assignable to the same property in base type 'ReadableStream'.
+  Type '(encoding: string) => void' is not assignable to type '{ (encoding: string): void; (encoding: string): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1155,9): error TS2416: Property 'pause' in type 'Readable' is not assignable to the same property in base type 'ReadableStream'.
+  Type '() => void' is not assignable to type '{ (): void; (): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1156,9): error TS2416: Property 'resume' in type 'Readable' is not assignable to the same property in base type 'ReadableStream'.
+  Type '() => void' is not assignable to type '{ (): void; (): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1158,9): error TS2416: Property 'unpipe' in type 'Readable' is not assignable to the same property in base type 'ReadableStream'.
+  Type '<T extends WritableStream>(destination?: T | undefined) => void' is not assignable to type '{ <T extends WritableStream>(destination?: T | undefined): void; (destination?: WritableStream | undefined): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1161,9): error TS2416: Property 'wrap' in type 'Readable' is not assignable to the same property in base type 'ReadableStream'.
+  Type '(oldStream: ReadableStream) => ReadableStream' is not assignable to type '{ (oldStream: ReadableStream): ReadableStream; (oldStream: ReadableStream): this; }'.
+    Type 'ReadableStream' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1170,18): error TS2300: Duplicate identifier 'Writable'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1189,18): error TS2300: Duplicate identifier 'Duplex'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1189,18): error TS2420: Class 'Duplex' incorrectly implements interface 'ReadWriteStream'.
+  Type 'Duplex' is missing the following properties from type 'ReadWriteStream': isPaused, [Symbol.asyncIterator]
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1206,18): error TS2300: Duplicate identifier 'Transform'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1214,9): error TS2416: Property 'setEncoding' in type 'Transform' is not assignable to the same property in base type 'ReadWriteStream'.
+  Type '(encoding: string) => void' is not assignable to type '{ (encoding: string): void; (encoding: string): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1215,9): error TS2416: Property 'pause' in type 'Transform' is not assignable to the same property in base type 'ReadWriteStream'.
+  Type '() => void' is not assignable to type '{ (): void; (): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1216,9): error TS2416: Property 'resume' in type 'Transform' is not assignable to the same property in base type 'ReadWriteStream'.
+  Type '() => void' is not assignable to type '{ (): void; (): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1218,9): error TS2416: Property 'unpipe' in type 'Transform' is not assignable to the same property in base type 'ReadWriteStream'.
+  Type '<T extends WritableStream>(destination?: T | undefined) => void' is not assignable to type '{ <T extends WritableStream>(destination?: T | undefined): void; (destination?: WritableStream | undefined): this; }'.
+    Type 'void' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1221,9): error TS2416: Property 'wrap' in type 'Transform' is not assignable to the same property in base type 'ReadWriteStream'.
+  Type '(oldStream: ReadableStream) => ReadableStream' is not assignable to type '{ (oldStream: ReadableStream): ReadableStream; (oldStream: ReadableStream): this; }'.
+    Type 'ReadableStream' is not assignable to type 'this'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1232,18): error TS2300: Duplicate identifier 'PassThrough'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1298,14): error TS2300: Duplicate identifier 'internal'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1318,18): error TS2300: Duplicate identifier 'Domain'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1326,9): error TS2416: Property 'addListener' in type 'Domain' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => Domain' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'Domain' is not assignable to type 'this'.
+      'Domain' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Domain'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1327,9): error TS2416: Property 'on' in type 'Domain' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => Domain' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'Domain' is not assignable to type 'this'.
+      'Domain' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Domain'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1328,9): error TS2416: Property 'once' in type 'Domain' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => Domain' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'Domain' is not assignable to type 'this'.
+      'Domain' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Domain'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1329,9): error TS2416: Property 'removeListener' in type 'Domain' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event: string, listener: Function) => Domain' is not assignable to type '{ (event: string, listener: Function): EventEmitter; (event: string | symbol, listener: (...args: any[]) => void): this; }'.
+    Type 'Domain' is not assignable to type 'this'.
+      'Domain' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Domain'.
+node_modules/json-schema-to-mongoose/typings/node/node.d.ts(1330,9): error TS2416: Property 'removeAllListeners' in type 'Domain' is not assignable to the same property in base type 'EventEmitter'.
+  Type '(event?: string | undefined) => Domain' is not assignable to type '{ (event?: string | undefined): EventEmitter; (event?: string | symbol | undefined): this; }'.
+    Type 'Domain' is not assignable to type 'this'.
+      'Domain' is assignable to the constraint of type 'this', but 'this' could be instantiated with a different subtype of constraint 'Domain'.
