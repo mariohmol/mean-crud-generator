@@ -13,6 +13,7 @@ Mongoose, Express, Angular e Nodejs generator with OpenAPI3 that generates the f
 * https://www.npmjs.com/package/generate-schema
 * https://github.com/YousefED/typescript-json-schema
 * https://github.com/ramiel/mongoose-jsonschema-validation
+* https://github.com/topliceanu/mongoose-gen
 * https://jsonschema.net/
 
 ## Install

@@ -30,6 +30,9 @@ export const makeRoute = (router, method, routePath, endpoint) => {
 
 export const makeGET = (req, res, endpoint) => {
     const data = { name: 'mario' };
+    const app = req.app;
+    const model = app.models['pet'];
+    model.find();
     makeResponse(req, res, endpoint, data);
 }
 

@@ -2,6 +2,7 @@ import * as config from './config';
 import SwaggerExpress from 'swagger-express-mw';
 import SwaggerUi from 'swagger-tools/middleware/swagger-ui';
 import meanCrudGenerator from '../backend';
+import mongoose from 'mongoose';
 import app from './app';
 
 
@@ -14,7 +15,7 @@ SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
     if (err) { throw err; }
 
     // GEN
-    meanCrudGenerator(swaggerExpress, configSwaggerExpress, __dirname, app );
+    meanCrudGenerator(swaggerExpress, configSwaggerExpress, __dirname, app);
 
     // Add swagger-ui (This must be before swaggerExpress.register)
     app.use(SwaggerUi(swaggerExpress.runner.swagger));
@@ -22,9 +23,14 @@ SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
     // install middleware
     swaggerExpress.register(app);
 
-    var port = config.PORT || 10010;
-    app.listen(port, () => {
-        console.log(`Listening on port ${port}`)
+    const { PORT, DATABASE_URL } = config;
+
+    const db = mongoose.connect(DATABASE_URL);
+
+    console.log(`Connected to db at ${DATABASE_URL}`);
+    app.listen(PORT, () => { // const server = 
+        console.log(`Listen to port ${PORT}`);
+
     });
 
 
