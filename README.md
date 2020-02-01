@@ -1,8 +1,8 @@
 # mean-crud-generator
 Mongoose, Express, Angular e Nodejs generator with OpenAPI3 that generates the frontend and JSONSchema to generate the backend
 
-1. Frontend: Create your Open API 3 schema using swagger
-2. Backend: Create a JSONSchema for your data (or Generate from Open API Schema
+1. Frontend: Create your Open API 3 schema using [swagger editor](https://swagger.io/tools/swagger-editor/)
+2. Backend: Create a JSONSchema for your data (or Generate from Open API Schema) using the [JSON Schema Editor](https://jsonschema.net/)
 
 All the endpoints, docs, mongo schemas, express and Angular CRUD components ready to use!
 
