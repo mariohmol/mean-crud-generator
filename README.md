@@ -23,6 +23,36 @@ Run `npm run dev` than you can see the demo project using the Pet Swagger exampl
 `http://localhost:8080/docs`
 
 
+See how to start one app, this is your JS code:
+
+```ts
+import express from 'express';
+import { BaseApp , startMeanCrudServer } from 'mean-crud-generator';
+
+// Create your own app express
+let app = express();
+
+// or use our Base App
+app = BaseApp;
+
+// Provide your app and the directory with the Open API Schemas and JSONSchemas
+startMeanCrudServer(app, __dirname)
+.then(()=>{
+    app.listen(8080, () => {
+        console.log(`Listen to port ${8080}`);
+    });
+});
+```
+
+Then create a Open API File like this [Demo Open APi](./demo/api/index.yaml) using the Swagger Editor.
+
+And if want to specife your data schema, make like this [JSONSchema example](./demo/schema/pet.json) with JSONSchema Editor.
+
+After running this app you can access:
+* API DOCS: `http://localhost:8080/docs`
+* API: `http://localhost:8080/api`
+* APP: `http://localhost:8080/app`
+
 # References
 
 ## Links
