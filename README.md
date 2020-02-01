@@ -6,13 +6,22 @@ Mongoose, Express, Angular e Nodejs generator with OpenAPI3 that generates the f
 
 All the endpoints, docs, mongo schemas, express and Angular CRUD components ready to use!
 
+
+## Live Example
+
+Base on this [Open API Schema example](./demo/api/index.yaml) and this [JSON Schema example](./demo/schema/pet.json) , it created the backend and docs:
+
+* DOCUMENTATION: https://mean-crud-generator.herokuapp.com/docs/
+* API: https://mean-crud-generator.herokuapp.com/api/pet/findByStatus?status=available
+
 ## Run this project
 
 Fork and clone to your computer, then do `npm i`.
 
 Run `npm run dev` than you can see the demo project using the Pet Swagger example:
 
-`http://localhost:8080/`
+`http://localhost:8080/docs`
+
 
 # References
 
@@ -40,3 +49,15 @@ Repo example mongood jsonschem working:
 ## Install
 
 npm install -g swagger
+
+# TODO
+
+* Frontend generation with Angular (in progress)
+* Generate missing JSONSchemas based on the Open API
+* Generate missing declarations in Open API Based on JSONSchemas
+* Validation from data type based on OpenAPI Schema (help wanted)
+* Special builtin datatype validation like credit cards, phones... (help wanted)
+* Special builtin datatype with js-brasil for example (help wanted)
+* Make JSONSchemas Editable in a Admin Section  (help wanted)
+* Make Open API Schemas editable in Admin Section  (help wanted)
+* Frontend generation with React (future)
