@@ -55,6 +55,11 @@ After running this app you can access:
 
 # References
 
+## Editors
+
+* https://jsonschema.net/
+
+
 ## Links
 
 * https://github.com/fliptoo/swagger-express
@@ -66,11 +71,7 @@ After running this app you can access:
 * https://transform.tools/json-to-json-schema
 * https://www.npmjs.com/package/generate-schema
 * https://github.com/YousefED/typescript-json-schema
-* https://github.com/ramiel/mongoose-jsonschema-validation
 * https://github.com/topliceanu/mongoose-gen
-* https://jsonschema.net/
-
-* https://github.com/openapi-contrib/openapi-schema-to-json-schema
 
 
 Repo example mongood jsonschem working:
