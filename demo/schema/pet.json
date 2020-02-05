@@ -16,6 +16,31 @@
             "type": "array"
         }
     },
+    "createdAt": {
+        "type": "string",
+        "title": "Date and time together, for example, 2018-11-13T20:20:39+00:00",
+        "format": "date-time"
+    },
+    "answerTime": {
+        "type": "string",
+        "title": "New in draft 7 Time, for example, 20:20:39+00:00",
+        "format": "time"
+    },
+    "email": {
+        "type": "string",
+        "title": "Internet email address, see RFC 5322, section 3.4.1",
+        "format": "email"
+    },
+    "hostname": {
+        "type": "string",
+        "title": "Internet host name, see RFC 1034, section 3.1.",
+        "format": "hostname"
+    },
+    "cpf": {
+        "type": "string",
+        "title": "CPF",
+        "format": "cpf"
+    },
     "required": [
         "name",
         "photoUrls"

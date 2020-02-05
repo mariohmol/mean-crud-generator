@@ -77,6 +77,12 @@ After running this app you can access:
 Repo example mongood jsonschem working:
 * https://github.com/glitchdigital/structured-data-api/
 
+## Frontend
+
+* https://github.com/gorums/generator-angular-2-crud
+* https://github.com/rahulsahay19/ngMaterialCrud
+* https://github.com/rahulsahay19/sample-angular-crud-app
+
 ## Install
 
 npm install -g swagger

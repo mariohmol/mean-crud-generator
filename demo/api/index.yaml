@@ -84,6 +84,28 @@ paths:
       - petstore_auth:
         - "write:pets"
         - "read:pets"
+    get:
+      tags:
+      - "pet"
+      summary: "Finds All Pets"
+      description: "Get all"
+      operationId: "findPets"
+      produces:
+      - "application/xml"
+      - "application/json"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: "array"
+            items:
+              $ref: "#/definitions/Pet"
+        400:
+          description: "Invalid status value"
+      security:
+      - petstore_auth:
+        - "write:pets"
+        - "read:pets"
   /pet/findByStatus:
     get:
       tags:

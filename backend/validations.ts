@@ -1,5 +1,7 @@
 export const validateParameters = (req, res, endpoint, swaggerExpress) => {
-
+    if (!endpoint.parameters) {
+        return true;
+    }
     let errors: any = [];
     endpoint.parameters
         .filter(param => param.required)
@@ -18,15 +20,15 @@ export const validateParameters = (req, res, endpoint, swaggerExpress) => {
                     break;
                 case "body":
                     // console.log(param, swaggerExpress.runner.swagger.definitions)
-                    const definitions  = swaggerExpress.runner.swagger.definitions;
-                    if(param.schema && param.schema.$ref){
+                    const definitions = swaggerExpress.runner.swagger.definitions;
+                    if (param.schema && param.schema.$ref) {
                         const vals = param.schema.$ref.split('/');
-                        const definition = vals[vals.length -1];
+                        const definition = vals[vals.length - 1];
                         const definitionObject = definitions[definition];
                         const props = definitionObject.properties;
                         const required = definitionObject.required;
-                        if(required){
-                            required.forEach(r=>{
+                        if (required) {
+                            required.forEach(r => {
                                 value = req.body[r]
                                 if (!value) {
                                     const prop = props[r] || {};
@@ -38,10 +40,10 @@ export const validateParameters = (req, res, endpoint, swaggerExpress) => {
                             });
                         }
                         return;
-                    }else{
+                    } else {
                         value = req.body[param.name];
                     }
-                    
+
                     break;
                 case "query":
                     value = req.query[param.name];

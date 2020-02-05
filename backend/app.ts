@@ -2,7 +2,8 @@ import cookieParser from 'cookie-parser';
 import * as path from 'path';
 import express from 'express';
 import bodyParser from 'body-parser';
-
+import cors from 'cors';
+import { CLIENT_ORIGIN } from './config';
 var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, '/views'));
@@ -13,6 +14,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, '/public')));
 
+app.use(cors({
+    CLIENT_ORIGIN
+}))
 // include api product file
 // var products = require('./api/controllers/products');
 // app.use('/api/products', products);
