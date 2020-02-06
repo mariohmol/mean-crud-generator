@@ -7,7 +7,8 @@
     "start": "ts-node demo/server.ts",
     "buildtest": "tsc >> tsc.log && cp demo/api build/demo/api && cp demo/schema build/demo/schema -R",
     "dev": "nodemon  demo/server.ts",
-    "yo": "cd demo && yo angular-2-crud",
+    "yo": "cd demo && cd app && yo ng-crud",
+    "yo-dev": "cd demo && cd app && yo ng-crud --force -- development",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

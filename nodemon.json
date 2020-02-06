@@ -9,6 +9,7 @@
     },
     "ignore": [
         "*.test.ts",
-        "demo/**/*.spec.ts"
+        "demo/**/*.spec.ts",
+        "demo/app/**"
     ]
 }
