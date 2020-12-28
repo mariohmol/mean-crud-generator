@@ -98,3 +98,9 @@ npm install -g swagger
 * Make JSONSchemas Editable in a Admin Section  (help wanted)
 * Make Open API Schemas editable in Admin Section  (help wanted)
 * Frontend generation with React (future)
+* https://github.com/APIDevTools/swagger-express-middleware
+* https://www.npmjs.com/package/swagger-ui-express
+* https://rjsf-team.github.io/react-jsonschema-form/
+* https://github.com/jdorn/json-editor
+* https://github.com/bjdash/JSON-Schema-Builder
+* https://github.com/hugorper/excel-2-jsonschema-ui

@@ -3,6 +3,8 @@ import SwaggerExpress from 'swagger-express-mw';
 import SwaggerUi from 'swagger-tools/middleware/swagger-ui';
 import meanCrudGenerator from '../backend';
 import mongoose from 'mongoose';
+import fs from 'fs';
+import yaml from 'js-yaml';
 import app from './app';
 
 const startMeanCrudServer = (app, dirname) => {
@@ -18,20 +20,34 @@ const startMeanCrudServer = (app, dirname) => {
             });
         }
 
+        const swaggerFile = dirname + 
+        // '/api/openapi.json'
+        '/api/index.yaml';
+
+        const swaggerJson = dirname + '/api/index.json';
         var configSwaggerExpress = {
             appRoot: dirname,
-            swaggerFile: dirname + '/api/index.yaml',
+            swaggerFile,
             baseUri
         };
 
+        var doc = yaml.safeLoad(fs.readFileSync(swaggerFile, 'utf8'));
+        let data = JSON.stringify(doc, null, 2);
+        fs.writeFileSync(swaggerJson, data);
+
+        // Saving back to YAMLfs.writeFileSync(dirname + '/api/./peer.yaml',yaml.safeDump(doc))
+
         SwaggerExpress.create(configSwaggerExpress, function (err, swaggerExpress) {
-            if (err) { reject(err); }
+            if (err) { reject(err); console.error(err); return; }
 
             // GEN
             meanCrudGenerator(swaggerExpress, configSwaggerExpress, dirname, app);
 
+            app.get('/docs/api.json', (_,res) => res.download(swaggerJson));
+
             // Add swagger-ui (This must be before swaggerExpress.register)
             app.use(SwaggerUi(swaggerExpress.runner.swagger));
+
 
             // install middleware
             // swaggerExpress.register(app);

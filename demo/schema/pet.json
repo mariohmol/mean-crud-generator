@@ -4,42 +4,96 @@
     "type": "object",
     "properties": {
         "userId": {
-            "type": "number"
+            "type": "string"
         },
         "id": {
-            "type": "number"
+            "type": "string"
+        },
+        "views": {
+            "type": "integer"
+        },
+        "numbercustom": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100,
+            "multipleOf" : 10,
+            "exclusiveMaximum": true
         },
         "name": {
-            "type": "string"
+            "type": "string",
+            "minLength": 3,
+            "maxLength": 30
         },
         "photoUrls": {
             "type": "array"
+        },
+        "active": {
+            "type": "boolean"
+        },
+        "color": {
+            "type": "string",
+            "examples": [
+                "black",
+                "brown",
+                "gray",
+                "white"
+            ]
+        },
+        "amount":{
+            "type": "string",
+            "pattern": "^(0|([1-9]+[0-9]*))(\\.[0-9]{1,2})?$",
+            "minLength": 1,
+            "description": "A Monetary Amount",
+            "examples": [
+                "0",
+                "0.00",
+                "0.05",
+                "19.95",
+                "255.5",
+                "120000"
+            ]
+        },
+        "tags": {
+            "$id": "#/properties/tags",
+            "type": "array",
+            "title": "The Tags Schema",
+            "items": {
+                "$id": "#/properties/tags/items",
+                "type": "string",
+                "title": "The Items Schema",
+                "default": "",
+                "examples": [
+                    "home",
+                    "green"
+                ],
+                "pattern": "^(.*)$"
+            }
+        },
+        "createdAt": {
+            "type": "string",
+            "title": "Date and time together, for example, 2018-11-13T20:20:39+00:00",
+            "format": "date-time"
+        },
+        "answerTime": {
+            "type": "string",
+            "title": "New in draft 7 Time, for example, 20:20:39+00:00",
+            "format": "time"
+        },
+        "email": {
+            "type": "string",
+            "title": "Internet email address, see RFC 5322, section 3.4.1",
+            "format": "email"
+        },
+        "hostname": {
+            "type": "string",
+            "title": "Internet host name, see RFC 1034, section 3.1.",
+            "format": "hostname"
+        },
+        "cpf": {
+            "type": "string",
+            "title": "CPF",
+            "format": "cpf"
         }
-    },
-    "createdAt": {
-        "type": "string",
-        "title": "Date and time together, for example, 2018-11-13T20:20:39+00:00",
-        "format": "date-time"
-    },
-    "answerTime": {
-        "type": "string",
-        "title": "New in draft 7 Time, for example, 20:20:39+00:00",
-        "format": "time"
-    },
-    "email": {
-        "type": "string",
-        "title": "Internet email address, see RFC 5322, section 3.4.1",
-        "format": "email"
-    },
-    "hostname": {
-        "type": "string",
-        "title": "Internet host name, see RFC 1034, section 3.1.",
-        "format": "hostname"
-    },
-    "cpf": {
-        "type": "string",
-        "title": "CPF",
-        "format": "cpf"
     },
     "required": [
         "name",

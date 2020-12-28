@@ -6,6 +6,25 @@ import { print } from "./utils";
 
 
 
+export const buildRoutes = (swaggerExpress, app, configSwaggerExpress) => {
+    const paths = swaggerExpress.runner.swagger.paths;
+
+    for (const key in paths) {
+        const endpointMethods = paths[key];
+        const router = express.Router({ mergeParams: true });
+        const routePath = replaceAllParamsUrl(key);
+        for (const method in endpointMethods) {
+            // print(`Creating  ${method} endpoint on ${key} `);
+            makeRoute(router, method, routePath, endpointMethods[method], swaggerExpress);
+        }
+
+        const basepath = swaggerExpress.runner.swagger.basePath + routePath;
+        // print(`---- Using route middleware ${basepath}`);
+
+        app.use(basepath, router);
+    }
+}
+
 export const makeRoute = (router, method, routePath, endpoint, swaggerExpress) => {
     print(`Creating  ${method} endpoint on ${routePath} `);
     router[method]('/', (req, res) => {
@@ -143,25 +162,9 @@ export const makeResponse = (req, res, endpoint: any, data: any = null) => {
 
 
 
-export const buildRoutes = (swaggerExpress, app, configSwaggerExpress) => {
-    const paths = swaggerExpress.runner.swagger.paths;
-
-    for (const key in paths) {
-        const endpointMethods = paths[key];
-        const router = express.Router({ mergeParams: true });
-        const routePath = replaceAllParamsUrl(key);
-        for (const method in endpointMethods) {
-            // print(`Creating  ${method} endpoint on ${key} `);
-            makeRoute(router, method, routePath, endpointMethods[method], swaggerExpress);
-        }
-
-        const basepath = swaggerExpress.runner.swagger.basePath + routePath;
-        // print(`---- Using route middleware ${basepath}`);
-
-        app.use(basepath, router);
-    }
-}
-
+/**
+ * UTILS
+ */
 const replaceAllParamsUrl = (str) => {
     var re = new RegExp('}', 'g');
     str = str.replace(re, '');

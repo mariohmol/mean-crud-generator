@@ -6,8 +6,6 @@ import cors from 'cors';
 import { CLIENT_ORIGIN } from './config';
 var app = express();
 // view engine setup
-app.set('views', path.join(__dirname, '/views'));
-// app.set('view engine', 'jade');
 
 app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -22,11 +20,8 @@ app.use(cors({
 // app.use('/api/products', products);
 
 app.get('/', function (req, res) {
-    res.render('index', {
-        title: 'Sample Using Swagger'
-    });
+    res.send("OK")
 });
-
 
 app.use(function (err, req, res, next) {
     res.status(err.status || 500);

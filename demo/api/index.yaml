@@ -514,6 +514,91 @@ paths:
       responses:
         default:
           description: "successful operation"
+  /byconsumer/{petId}:
+    get:
+      tags:
+      - "pet"
+      - "table"
+      - "calendar"
+      - "board"
+      - "form"
+      summary: "Find pet by ID"
+      description: "Returns a single pet"
+      operationId: "getbyconsumer"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "petId"
+        in: "path"
+        description: "ID of pet to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      responses:
+        200:
+          description: "successful operation"
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+                description: Name of the pet
+              numbercustom:
+                type: integer
+                description: A test custom number.
+              active:
+                type: boolean
+                description: A test boolean.
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Pet not found"
+      security:
+      - api_key: []
+    put:
+      tags:
+      - "pet"
+      summary: "Update an existing pet"
+      description: ""
+      operationId: "updatebyconsumer"
+      consumes:
+      - "application/json"
+      - "application/xml"
+      produces:
+      - "application/xml"
+      - "application/json"
+      parameters:
+      - name: "petId"
+        in: "path"
+        description: "ID of pet to return"
+        required: true
+        type: "integer"
+        format: "int64"
+      - in: "body"
+        name: "body"
+        description: "Pet object that needs to be added to the store"
+        required: true
+        schema:
+          type: object
+          properties:
+            numbercustom:
+              type: integer
+              description: The user ID.
+            active:
+              type: boolean
+              description: The user name.
+      responses:
+        400:
+          description: "Invalid ID supplied"
+        404:
+          description: "Pet not found"
+        405:
+          description: "Validation exception"
+      security:
+      - petstore_auth:
+        - "write:pets"
+        - "read:pets"
   /user/{username}:
     get:
       tags:
